@@ -1,4 +1,3 @@
-website
-=======
+# css recipes
 
-Sass recipes (with optional output for non Sass users use when it's possible)
+Website repo
