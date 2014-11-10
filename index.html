@@ -1,10 +1,149 @@
 <!doctype html>
-<style>body{font-family:sans-serif}</style>
+<title>cssrecipes</title>
+<style>
+  html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
 
-<h1>CSS Recipes</h1>
+    background: #f1f1f1;
+  }
 
-<p>CSS recipes to cook your UI.</p>
+  body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
 
-<p><small>more soon</small></p>
+    font-family: Avenir Next, sans-serif;
+    line-height: 1.5rem;
+  }
 
-<a href="https://github.com/cssrecipes">github.com/cssrecipes</a>
+  a,
+  a:visited {
+    color: currentColor !important;
+    position: relative;
+    text-decoration: none;
+  }
+
+    a::before {
+      content: "";
+      position: absolute;
+      height: 1px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+
+      background: currentColor;
+      opacity: .25;
+
+      transform: scaleX(.85) translateY(.3rem);
+      transition: .2s;
+    }
+    a:hover::before {
+      opacity: 0.75;
+      transform: scaleX(.95) translateY(.1rem);
+    }
+    a:active::before {
+      opacity: .2;
+    }
+
+  .cssrecipes-Light {
+    color: #fff;
+    font-weight: 300;
+  }
+
+    .cssrecipes-Light a { color: #fff !important }
+    .cssrecipes-Light a::before { background: #f1f1f1 }
+
+  .cssrecipes-Logo {
+    font-weight: 300;
+  }
+    .cssrecipes-Logo svg {
+      height: 2rem;
+      width: auto;
+      fill: currentColor;
+    }
+
+  .cssrecipes-Section {
+    max-width: 60rem;
+    margin: auto;
+  }
+
+  .cssrecipes-Header {
+    overflow: auto;
+  }
+
+  .cssrecipes-Promo {
+    overflow: auto;
+    padding: 6rem 0;
+    text-align: center;
+    background: linear-gradient(120deg, #318EDF, #46c340);
+  }
+
+    .cssrecipes-Promo-baseline {
+      display: block;
+      font-size: 3rem;
+      line-height: 3rem;
+      margin: 6rem auto;
+      text-shadow: 0 .1rem .1rem rgba(0, 0, 0, 0.4);
+    }
+
+  .cssrecipes-List {
+    text-align: center;
+    padding: 3rem 0;
+  }
+
+    .cssrecipes-List a {
+      margin: 1rem;
+    }
+
+  .cssrecipes-Footer {
+    font-size: .8rem;
+    text-align: center;
+    padding-top: 1rem;
+  }
+</style>
+
+<header class="cssrecipes-Header">
+  <div class="cssrecipes-Section">
+    <h1 class="cssrecipes-Logo">
+      cssrecipes
+    </h1>
+  </div>
+</header>
+
+<section class="cssrecipes-Light cssrecipes-Promo">
+  <div class="cssrecipes-Section">
+    <strong class="cssrecipes-Promo-baseline">
+      .r-* {}
+      <br />
+      <br />
+      components &amp; utilities to cook
+      <br />your web apps &amp; websites.
+    </strong>
+    <p>
+      <a title="github.com/cssrecipes" href="https://github.com/cssrecipes">Checkout the project on GitHub</a>
+    </p>
+  </div>
+</section>
+
+<div class="cssrecipes-Section cssrecipes-List">
+  <a href="https://github.com/cssrecipes/defaults">defaults</a>
+  <a href="https://github.com/cssrecipes/reset">reset</a>
+  <a href="https://github.com/cssrecipes/custom-media-queries">custom-media-queries</a>
+  <a href="https://github.com/cssrecipes/utils">utils</a>
+  <a href="https://github.com/cssrecipes/vertical-rhythm">vertical-rhythm</a>
+  <a href="https://github.com/cssrecipes/grid">grid</a>
+  <a href="https://github.com/cssrecipes/tooltip">tooltip</a>
+</div>
+
+<footer class="cssrecipes-Footer">
+  <div class="cssrecipes-Section">
+    <a href="irc://irc.freenode.net/cssrecipes">Join #cssrecipes on irc.freenode.net</a> if you have any questions.
+  </div>
+</footer>
+
+<script>
+!function(c,s,S,r,e,C,i){c.GoogleAnalyticsObject=e,c[e]=c[e]||function(){(c[e].q=c[e].q||[]).push(arguments)},c[e].l=+new Date,C=s.createElement(S),i=s.getElementsByTagName(S)[0],C.src=r,i.parentNode.insertBefore(C,i)}(this,document,"script","//www.google-analytics.com/analytics.js","ga");
+ga("create", "UA-55403963-2");ga("send", "pageview");
+</script>
